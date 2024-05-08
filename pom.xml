@@ -21,7 +21,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.example.Application</mainClass>
+                            <mainClass>com.example.MyApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
