@@ -1,5 +1,3 @@
-FROM openjdk:8-jdk-alpine
-WORKDIR /app
-COPY . /app
-EXPOSE 8080
-CMD ["java", "-jar", "target/docker_maven-1.0-SNAPSHOT.jar"]
+FROM openjdk:17-jdk-alpine
+COPY target/docker_maven-1.0-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
