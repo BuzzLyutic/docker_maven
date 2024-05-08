@@ -1,4 +1,5 @@
-FROM maven:3.8.1-openjdk-11-slim
+FROM openjdk:8-jdk-alpine
 WORKDIR /app
 COPY . /app
-CMD ["mvn", "clean", "install"]
+EXPOSE 8080
+CMD ["java", "-jar", "target/my-maven-app-1.0-SNAPSHOT.jar"]
