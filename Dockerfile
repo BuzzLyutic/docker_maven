@@ -5,5 +5,5 @@ RUN mvn clean package
 
 FROM openjdk:11-jre-slim
 WORKDIR /app
-COPY --from=build /app/target/my-maven-project-1.0-SNAPSHOT.jar /app/app.jar
+COPY --from=build /app/target/docker_maven-1.0-SNAPSHOT.jar /app/app.jar
 CMD ["java", "-jar", "/app/app.jar"]
